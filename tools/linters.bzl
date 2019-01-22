@@ -66,7 +66,7 @@ def _add_pylint_linter_rules(source_labels, source_filenames, name, extra_args=N
   pylint_cfg_args = ["--config $(location //:pycodestyle.cfg) "] + extra_args
   native.py_test(
     name = name + "_pycodestyle",
-    srcs = ["//external:pycodestyle"],
+    srcs = ["@pycodestyle_archive//:pycodestyle"],
     data = pylint_cfg + source_labels,
     args = pylint_cfg_args + source_filenames,
     main = "pycodestyle.py",

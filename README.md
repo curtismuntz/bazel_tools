@@ -18,21 +18,21 @@ linter_dependencies()
 ```
 
 then in your `BUILD` files, you can add linter tests via the following:
+
 ```
-load("@murtis_bazel_tools//tools:linters.bzl", "cpplint")
+load("@murtis_bazel_tools//tools:linters.bzl", "cpplint", "pylint")
 
-cc_library(
-    name = "example_lib",
-    srcs = ["example_lib.cpp"],
-    hdrs = ["example_lib.h"],
-)
 
-cc_binary(
-    name = "example",
-    srcs = ["main.cpp"],
-    deps = [":example_lib"],
-)
-
+# place at the end of the file
 cpplint()
+pylint()
+```
 
+Note to make these work, you'll need config files: `CPPLINT.cfg` and `pycodestyle.cfg` present at the root of the workspace. Be sure to also export these in the `//BUILD.bazel` file:
+
+```
+exports_files([
+    "pycodestyle.cfg",
+    "CPPLINT.cfg",
+])
 ```

@@ -1,15 +1,21 @@
-load("//tools:linters.bzl", "cpplint")
+load("//tools:linters.bzl", "cpplint", "pylint")
 
 cc_library(
-    name = "example_lib",
-    srcs = ["example_lib.cpp"],
-    hdrs = ["example_lib.h"],
+    name = "cpp_lib",
+    srcs = ["cpp_lib.cpp"],
+    hdrs = ["cpp_lib.h"],
 )
 
 cc_binary(
-    name = "example",
+    name = "cpp_example",
     srcs = ["main.cpp"],
-    deps = [":example_lib"],
+    deps = [":cpp_lib"],
+)
+
+py_binary(
+    name = "py_example",
+    srcs = ["py_example.py"],
 )
 
 cpplint()
+pylint()

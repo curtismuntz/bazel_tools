@@ -4,8 +4,7 @@ def linter_dependencies(**kwargs):
     pycodestyle_name = "pycodestyle_archive"
     if pycodestyle_name not in native.existing_rules():
         http_archive(
-            name = "pycodestyle_archive",
-            build_file = "//third_party:pycodestyle.BUILD",
+            name = pycodestyle_name,
             strip_prefix = "pycodestyle-f4f6e556faea76809b70413fea9f496288d56713",
             urls = ["https://github.com/PyCQA/pycodestyle/archive/f4f6e556faea76809b70413fea9f496288d56713.tar.gz"],
             build_file_content = """
@@ -26,8 +25,7 @@ py_binary(
     cpplint_name = "cpplint_archive"
     if cpplint_name not in native.existing_rules():
         http_archive(
-            name = "cpplint_archive",
-            #build_file = "//third_party:cpplint.BUILD",
+            name = cpplint_name,
             sha256 = "952d19b925ebfefbd2a7724f48682dc42617965131f8058a4732fa167734c416",
             strip_prefix = "cpplint-5a38c3a6446914740884a976c9b5cded86b98e1c",
             urls = ["https://github.com/cpplint/cpplint/archive/5a38c3a6446914740884a976c9b5cded86b98e1c.tar.gz"],

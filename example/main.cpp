@@ -2,7 +2,7 @@
 #include <iostream>
 #include <thread>
 
-#include "example_lib.h"
+#include "example/cpp_lib.h"
 
 int main(int argc, char **argv) {
   auto kMaxPrints = 5;
