@@ -5,11 +5,11 @@ in your `WORKSPACE` file:
 
 ```
 http_archive(
-    name = 'murtis_bazel_tools',
+    name = "murtis_bazel_tools",
     urls = [
-      'https://gitlab.com/murtis/bazel_tools/-/archive/master/bazel_tools-master.tar.gz',
+      "https://gitlab.com/murtis/bazel_tools/-/archive/master/bazel_tools-master.tar.gz",
     ],
-    strip_prefix = 'bazel_tools-master',
+    strip_prefix = "bazel_tools-master",
 )
 
 load("@murtis_bazel_tools//tools:deps.bzl", "linter_dependencies")
