@@ -37,18 +37,10 @@ package(default_visibility = ["//visibility:public"])
 
 licenses(["notice"])
 
-# We can't set name="cpplint" here because that's the directory name so the
-# sandbox gets confused.  We'll give it a private name with a public alias.
 py_binary(
-    name = "cpplint_binary",
+    name = "cpplint",
     srcs = ["cpplint.py"],
     main = "cpplint.py",
-    visibility = [],
-)
-
-alias(
-    name = "cpplint",
-    actual = ":cpplint_binary",
 )
 """,
         )
