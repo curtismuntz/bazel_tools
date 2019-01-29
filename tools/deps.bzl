@@ -5,6 +5,7 @@ def linter_dependencies(**kwargs):
     if pycodestyle_name not in native.existing_rules():
         http_archive(
             name = pycodestyle_name,
+            sha256 = "559a8c0aab9140ff897ca834f26b6a0328a11278936c8c6ff6653401904b4540",
             strip_prefix = "pycodestyle-f4f6e556faea76809b70413fea9f496288d56713",
             urls = ["https://github.com/PyCQA/pycodestyle/archive/f4f6e556faea76809b70413fea9f496288d56713.tar.gz"],
             build_file_content = """
