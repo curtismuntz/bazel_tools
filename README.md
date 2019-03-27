@@ -1,4 +1,10 @@
-To use this:
+Some commonly used bazel macros and tools that I use.
+
+* `github_repo` macro
+* linters for cpp and python
+
+
+## Usage
 
 
 in your `WORKSPACE` file:
