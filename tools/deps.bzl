@@ -44,3 +44,44 @@ py_binary(
 )
 """,
         )
+
+def google_cpp_dependencies(**kwargs):
+    # GoogleTest/GoogleMock framework. Used by most unit-tests.
+    google_test_archive = "com_github_google_googletest"
+    if google_test_archive not in native.existing_rules():
+        http_archive(
+            name = google_test_archive,
+            sha256 = "ff7a82736e158c077e76188232eac77913a15dac0b22508c390ab3f88e6d6d86",
+            strip_prefix = "googletest-b6cd405286ed8635ece71c72f118e659f4ade3fb",
+            urls = ["https://github.com/google/googletest/archive/b6cd405286ed8635ece71c72f118e659f4ade3fb.zip"],  # 2019-01-07
+        )
+
+    # Google benchmark.
+    google_benchmark_archive = "com_github_google_benchmark"
+    if google_benchmark_archive not in native.existing_rules():
+        http_archive(
+            name = google_benchmark_archive,
+            sha256 = "59f918c8ccd4d74b6ac43484467b500f1d64b40cc1010daa055375b322a43ba3",
+            strip_prefix = "benchmark-16703ff83c1ae6d53e5155df3bb3ab0bc96083be",
+            urls = ["https://github.com/google/benchmark/archive/16703ff83c1ae6d53e5155df3bb3ab0bc96083be.zip"],
+        )
+
+    # GFlags
+    gflags_archive = "com_github_gflags_gflags"
+    if gflags_archive not in native.existing_rules():
+        http_archive(
+            name = gflags_archive,
+            sha256 = "53b16091efa386ab11e33f018eef0ed489e0ab63554455293cbb0cc2a5f50e98",
+            strip_prefix = "gflags-28f50e0fed19872e0fd50dd23ce2ee8cd759338e",
+            urls = ["https://github.com/gflags/gflags/archive/28f50e0fed19872e0fd50dd23ce2ee8cd759338e.zip"],  # 2019-01-25
+        )
+
+    # Glog
+    glog_archive = "com_github_google_glog"
+    if glog_archive not in native.existing_rules():
+        http_archive(
+            name = glog_archive,
+            sha256 = "6281aa4eeecb9e932d7091f99872e7b26fa6aacece49c15ce5b14af2b7ec050f",
+            strip_prefix = "glog-96a2f23dca4cc7180821ca5f32e526314395d26a",
+            urls = ["https://github.com/google/glog/archive/96a2f23dca4cc7180821ca5f32e526314395d26a.zip"],  # 2019-03-21
+        )
