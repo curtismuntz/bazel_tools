@@ -13,9 +13,9 @@ in your `WORKSPACE` file:
 http_archive(
     name = "murtis_bazel_tools",
     urls = [
-      "https://gitlab.com/murtis/bazel_tools/-/archive/master/bazel_tools-master.tar.gz",
+      "https://github.com/curtismuntz/bazel_tools/archive/<commit hash>.tar.gz",
     ],
-    strip_prefix = "bazel_tools-master",
+    strip_prefix = "bazel_tools-<commit hash>",
 )
 ```
 
