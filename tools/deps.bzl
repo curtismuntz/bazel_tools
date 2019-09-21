@@ -50,8 +50,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_google_googletest",
         user = "google",
         repo = "googletest",
-        tag = "b6cd405286ed8635ece71c72f118e659f4ade3fb",
-        sha256 = "8d9aa381a6885fe480b7d0ce8ef747a0b8c6ee92f99d74ab07e3503434007cb0",
+        tag = "f2fb48c3b3d79a75a88a99fba6576b25d42ec528",
+        sha256 = "89439545b04326bc8a9540c665aee5cdb23b728e75ef6cfbfa85b0508ee278e2",
     )
 
     # Google benchmark.
