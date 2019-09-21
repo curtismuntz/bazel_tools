@@ -27,8 +27,8 @@ py_binary(
         name = "cpplint_archive",
         user = "cpplint",
         repo = "cpplint",
-        tag = "5a38c3a6446914740884a976c9b5cded86b98e1c",
-        sha256 = "952d19b925ebfefbd2a7724f48682dc42617965131f8058a4732fa167734c416",
+        tag = "dfd26b636c1307556ceedfb148d94fac1349fae8",
+        sha256 = "6eb681d226706552a5259feb38a800f46e860ed318946ae6f1d2402b641c71c0",
         build_file_content = """
 # Description:
 #    Static code checker for C++
