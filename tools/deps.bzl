@@ -6,8 +6,8 @@ def linter_dependencies(**kwargs):
         name = "pycodestyle_archive",
         user = "PyCQA",
         repo = "pycodestyle",
-        tag = "f4f6e556faea76809b70413fea9f496288d56713",
-        sha256 = "559a8c0aab9140ff897ca834f26b6a0328a11278936c8c6ff6653401904b4540",
+        tag = "9726e10004e5615c432f126530ee0540b9903f6e",
+        sha256 = "fb3b819e67230be8f34cbdfe9ec13e87941cab593fdb002f02a87c9de51c255f",
         build_file_content = """
 # Description:
 #    Simple Python style checker in one Python file
