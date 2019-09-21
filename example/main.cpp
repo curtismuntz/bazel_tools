@@ -3,7 +3,8 @@
 #include <chrono>
 #include <iostream>
 #include <thread>
-
+#include <vector>
+#include "absl/strings/str_join.h"
 
 #include "example/cpp_lib.h"
 
@@ -17,6 +18,8 @@ int main(int argc, char **argv) {
 
   auto kMaxPrints = 5;
   auto printme = example_lib::constructString();
+  std::vector<std::string> v = {"foo", "bar", "baz"};
+  std::string s = absl::StrJoin(v, "-");
 
   for (auto i = 0; i < kMaxPrints; ++i) {
     LOG(INFO) << printme << i;

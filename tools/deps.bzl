@@ -45,6 +45,13 @@ py_binary(
     )
 
 def google_cpp_dependencies(**kwargs):
+    github_repo(
+        name = "rules_cc",
+        user = "bazelbuild",
+        repo = "rules_cc",
+        tag = "42ed56d8acbd9938b4ee8b2066d2c4c898a22504",
+        sha256 = "7c574de35acdbfd333eb3f8eb05990b377ef8dc2303664f4ddd6cc83bbf4a30a",
+    )
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
     github_repo(
         name = "com_github_google_googletest",
@@ -79,4 +86,11 @@ def google_cpp_dependencies(**kwargs):
         repo = "glog",
         tag = "4cc89c9e2b452db579397887c37f302fb28f6ca1",
         sha256 = "ec4a7a3d256ee0a192334644839f00dfdce78949cfdeba673b7339982e573db6",
+    )
+
+    http_archive(
+      name = "com_google_absl",
+      urls = ["https://github.com/abseil/abseil-cpp/archive/7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72.zip"],  # 2019-03-14
+      strip_prefix = "abseil-cpp-7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72",
+      sha256 = "71d00d15fe6370220b6685552fb66e5814f4dd2e130f3836fc084c894943753f",
     )

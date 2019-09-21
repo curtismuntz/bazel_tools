@@ -9,5 +9,5 @@ def github_repo(name, user, repo, tag, sha256, **kwargs):
             url = github_url,
             sha256 = sha256,
             strip_prefix = github_prefix,
-            **kwargs,
+            **kwargs
         )
