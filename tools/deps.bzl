@@ -59,8 +59,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_google_benchmark",
         user = "google",
         repo = "benchmark",
-        tag = "16703ff83c1ae6d53e5155df3bb3ab0bc96083be",
-        sha256 = "6e40ccab16a91a7beff4b5b640b84846867e125ebce6ac0fe3a70c5bae39675f",
+        tag = "e7e3d976ef7d89ffc6bd6a53a6ea13ec35bb411d",
+        sha256 = "0d792b82be4ffa66a0ba49006ada626c81a9ce38bf6755ba184acb6eb0da01e1",
     )
 
     # GFlags
