@@ -68,8 +68,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_gflags_gflags",
         user = "gflags",
         repo = "gflags",
-        tag = "28f50e0fed19872e0fd50dd23ce2ee8cd759338e",
-        sha256 = "63ae70ea3e05780f7547d03503a53de3a7d2d83ad1caaa443a31cb20aea28654",
+        tag = "2cac878761b29776f0e95a191a03c08a2ac0f014",
+        sha256 = "94bac08d85632e6d32b7f090c218756b33cc898ba55ab5845060bbb4660e02e5",
     )
 
     # Glog
