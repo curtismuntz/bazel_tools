@@ -7,7 +7,7 @@ cc_library(
 )
 
 cc_binary(
-    name = "cpp_example",
+    name = "cpp",
     srcs = ["main.cpp"],
     deps = [
       ":cpp_lib",
@@ -34,10 +34,4 @@ cc_test(
     ],
 )
 
-py_binary(
-    name = "py_example",
-    srcs = ["py_example.py"],
-)
-
 cpplint()
-pylint()

@@ -1,4 +1,4 @@
-#include "example/cpp_lib.h"
+#include "cpp/cpp_lib.h"
 
 namespace example_lib {
 

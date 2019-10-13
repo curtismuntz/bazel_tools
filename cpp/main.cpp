@@ -6,7 +6,7 @@
 #include <vector>
 #include "absl/strings/str_join.h"
 
-#include "example/cpp_lib.h"
+#include "cpp/cpp_lib.h"
 
 DEFINE_string(delimiter, "-", "getst print string");
 

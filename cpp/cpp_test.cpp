@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "example/cpp_lib.h"
+#include "cpp/cpp_lib.h"
 
 using ::testing::EmptyTestEventListener;
 using ::testing::InitGoogleTest;
