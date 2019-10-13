@@ -1,7 +1,17 @@
 load("//tools:github_repo.bzl", "github_repo")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+# https://github.com/PyCQA/pycodestyle
+# https://github.com/bazelbuild/rules_cc
+# https://github.com/abseil/abseil-cpp
+# https://github.com/google/googletest
+# https://github.com/google/benchmark
+# https://github.com/gflags/gflags
+# https://github.com/google/glog
+# https://github.com/cpplint/cpplint
+
 def linter_dependencies(**kwargs):
+    # https://github.com/PyCQA/pycodestyle
     github_repo(
         name = "pycodestyle_archive",
         user = "PyCQA",
@@ -23,6 +33,7 @@ py_binary(
 """,
     )
 
+    # https://github.com/cpplint/cpplint
     github_repo(
         name = "cpplint_archive",
         user = "cpplint",
@@ -45,41 +56,47 @@ py_binary(
     )
 
 def google_cpp_dependencies(**kwargs):
+    # Bazel rules_cc
+    # https://github.com/bazelbuild/rules_cc
     github_repo(
         name = "rules_cc",
         user = "bazelbuild",
         repo = "rules_cc",
-        tag = "42ed56d8acbd9938b4ee8b2066d2c4c898a22504",
-        sha256 = "7c574de35acdbfd333eb3f8eb05990b377ef8dc2303664f4ddd6cc83bbf4a30a",
+        tag = "12a2d801f69ca8fff9128a8044549d7cbac306f1",
+        sha256 = "7bf35294e204d8f68a282060690a9be80ccbbd478619c3f98cdc3110d1f3594e",
     )
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
+    # https://github.com/google/googletest
     github_repo(
         name = "com_github_google_googletest",
         user = "google",
         repo = "googletest",
-        tag = "f2fb48c3b3d79a75a88a99fba6576b25d42ec528",
-        sha256 = "89439545b04326bc8a9540c665aee5cdb23b728e75ef6cfbfa85b0508ee278e2",
+        tag = "ba513d2c9525a7c986c115ed5d603f2cf17c6016",
+        sha256 = "15e558e199cc51b813d44c2e8c08e5c608828b8a40632a544dcc4baaa5fc8750",
     )
 
     # Google benchmark.
+    # https://github.com/google/benchmark
     github_repo(
         name = "com_github_google_benchmark",
         user = "google",
         repo = "benchmark",
-        tag = "e7e3d976ef7d89ffc6bd6a53a6ea13ec35bb411d",
-        sha256 = "0d792b82be4ffa66a0ba49006ada626c81a9ce38bf6755ba184acb6eb0da01e1",
+        tag = "309de5988eb949a27e077a24a1d83c0687d10d57",
+        sha256 = "d72d82607eaf525138d7cf0a32e98e03ae584579df964d8f05fb1512f9c5c4af",
     )
 
     # GFlags
+    # https://github.com/gflags/gflags
     github_repo(
         name = "com_github_gflags_gflags",
         user = "gflags",
         repo = "gflags",
-        tag = "2cac878761b29776f0e95a191a03c08a2ac0f014",
-        sha256 = "94bac08d85632e6d32b7f090c218756b33cc898ba55ab5845060bbb4660e02e5",
+        tag = "0b7f8db2c6b1b0b2451da0923a9ab09cc610e8d1",
+        sha256 = "55e4b0f7111d7b87cb99b1edc8d7c753a3bfdd783e929698d36482e1161ad2ab",
     )
 
     # Glog
+    # https://github.com/google/glog
     github_repo(
         name = "com_github_google_glog",
         user = "google",
@@ -88,9 +105,12 @@ def google_cpp_dependencies(**kwargs):
         sha256 = "ec4a7a3d256ee0a192334644839f00dfdce78949cfdeba673b7339982e573db6",
     )
 
-    http_archive(
-      name = "com_google_absl",
-      urls = ["https://github.com/abseil/abseil-cpp/archive/7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72.zip"],  # 2019-03-14
-      strip_prefix = "abseil-cpp-7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72",
-      sha256 = "71d00d15fe6370220b6685552fb66e5814f4dd2e130f3836fc084c894943753f",
+    # Abseil
+    # https://github.com/abseil/abseil-cpp
+    github_repo(
+        name = "com_google_absl",
+        user = "abseil",
+        repo = "abseil-cpp",
+        tag = "e9f9000c7c80993cb589d011616b7a8016e42f4a",
+        sha256 = "d7bc757613cc7701813a9686cd9c62610538f1098bb07dca23f3056afd9e79ad",
     )
