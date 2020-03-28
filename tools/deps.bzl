@@ -16,8 +16,8 @@ def linter_dependencies(**kwargs):
         name = "pycodestyle_archive",
         user = "PyCQA",
         repo = "pycodestyle",
-        tag = "9726e10004e5615c432f126530ee0540b9903f6e",
-        sha256 = "fb3b819e67230be8f34cbdfe9ec13e87941cab593fdb002f02a87c9de51c255f",
+        tag = "5c6044771ce627c95b234765063ce8d3897eadbf",
+        sha256 = "eb4a7898230fc3b1ea8f736aacfd5b4ef3c7434b8b1bd94da42180985c18cf23",
         build_file_content = """
 # Description:
 #    Simple Python style checker in one Python file
@@ -38,8 +38,8 @@ py_binary(
         name = "cpplint_archive",
         user = "cpplint",
         repo = "cpplint",
-        tag = "dfd26b636c1307556ceedfb148d94fac1349fae8",
-        sha256 = "6eb681d226706552a5259feb38a800f46e860ed318946ae6f1d2402b641c71c0",
+        tag = "851ceb00cba6301b00167cf5c313532bc05cf1eb",
+        sha256 = "6e272cfd8298017bd69421c6f236d0e9a577cabf3f28715b44238f46198b54d9",
         build_file_content = """
 # Description:
 #    Static code checker for C++
@@ -62,17 +62,18 @@ def google_cpp_dependencies(**kwargs):
         name = "rules_cc",
         user = "bazelbuild",
         repo = "rules_cc",
-        tag = "12a2d801f69ca8fff9128a8044549d7cbac306f1",
-        sha256 = "7bf35294e204d8f68a282060690a9be80ccbbd478619c3f98cdc3110d1f3594e",
+        tag = "34ca16f4aa4bf2a5d3e4747229202d6cb630ebab",
+        sha256 = "e637dc045e70e43b7431fbeacb68d569a84f9fe1cb5879c432aa0855097dce57",
     )
+
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
     # https://github.com/google/googletest
     github_repo(
         name = "com_github_google_googletest",
         user = "google",
         repo = "googletest",
-        tag = "ba513d2c9525a7c986c115ed5d603f2cf17c6016",
-        sha256 = "15e558e199cc51b813d44c2e8c08e5c608828b8a40632a544dcc4baaa5fc8750",
+        tag = "67cc66080d64e3fa5124fe57ed0cf15e2cecfdeb",
+        sha256 = "6b03f70e69c242d33195a0b9509eb8c5bafb502e2830bf1c21fe8b190ff7b19f",
     )
 
     # Google benchmark.
@@ -81,8 +82,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_google_benchmark",
         user = "google",
         repo = "benchmark",
-        tag = "309de5988eb949a27e077a24a1d83c0687d10d57",
-        sha256 = "d72d82607eaf525138d7cf0a32e98e03ae584579df964d8f05fb1512f9c5c4af",
+        tag = "e30cac6b06cf05416a9358df8be868ab01602a68",
+        sha256 = "d602bb4726b149315a00fb057f107bf52bacc56a211160832bd8948f02c18a72",
     )
 
     # GFlags
@@ -91,8 +92,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_gflags_gflags",
         user = "gflags",
         repo = "gflags",
-        tag = "0b7f8db2c6b1b0b2451da0923a9ab09cc610e8d1",
-        sha256 = "55e4b0f7111d7b87cb99b1edc8d7c753a3bfdd783e929698d36482e1161ad2ab",
+        tag = "addd749114fab4f24b7ea1e0f2f837584389e52c",
+        sha256 = "68e26a487038a842da3ef2ddd1f886dad656e9efaf1a3d49e87d1d3a9fa3a8eb",
     )
 
     # Glog
@@ -101,8 +102,8 @@ def google_cpp_dependencies(**kwargs):
         name = "com_github_google_glog",
         user = "google",
         repo = "glog",
-        tag = "4cc89c9e2b452db579397887c37f302fb28f6ca1",
-        sha256 = "ec4a7a3d256ee0a192334644839f00dfdce78949cfdeba673b7339982e573db6",
+        tag = "3ba8976592274bc1f907c402ce22558011d6fc5e",
+        sha256 = "6fc352c434018b11ad312cd3b56be3597b4c6b88480f7bd4e18b3a3b2cf961aa",
     )
 
     # Abseil
@@ -111,6 +112,6 @@ def google_cpp_dependencies(**kwargs):
         name = "com_google_absl",
         user = "abseil",
         repo = "abseil-cpp",
-        tag = "e9f9000c7c80993cb589d011616b7a8016e42f4a",
-        sha256 = "d7bc757613cc7701813a9686cd9c62610538f1098bb07dca23f3056afd9e79ad",
+        tag = "79e0dc11514df035a8d07a356f9ee1800fb2160c",
+        sha256 = "d22cdc9f6d3fb68558d083d0229c5a0733d5bb4af1219eb670d5ca0bb57f4c16",
     )
