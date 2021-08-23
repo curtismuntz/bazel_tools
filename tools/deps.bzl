@@ -1,23 +1,24 @@
 load("//tools:github_repo.bzl", "github_repo")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-# https://github.com/PyCQA/pycodestyle
-# https://github.com/bazelbuild/rules_cc
-# https://github.com/abseil/abseil-cpp
-# https://github.com/google/googletest
-# https://github.com/google/benchmark
-# https://github.com/gflags/gflags
-# https://github.com/google/glog
-# https://github.com/cpplint/cpplint
+# Last updated: August 22, 2021
+# https://github.com/PyCQA/pycodestyle/commits
+# https://github.com/bazelbuild/rules_cc/commits
+# https://github.com/abseil/abseil-cpp/commits
+# https://github.com/google/googletest/commits
+# https://github.com/google/benchmark/commits
+# https://github.com/gflags/gflags/commits
+# https://github.com/google/glog/commits
+# https://github.com/cpplint/cpplint/commits
 
 def linter_dependencies(**kwargs):
-    # https://github.com/PyCQA/pycodestyle
+    # https://github.com/PyCQA/pycodestyle/commits
     github_repo(
         name = "pycodestyle_archive",
         user = "PyCQA",
         repo = "pycodestyle",
-        tag = "c47f5c1f977c20f16c19bc282834c70c9b40d800",
-        sha256 = "259b55c158c000d5e4aa406aff452eaceaff4ce66c51d49454fcbfb39aec6770",
+        tag = "aa3417b6a51f5912e32d9c8c879e1b9dd660d5f8",
+        sha256 = "21653cea212b8c3e3ab5934afb3138fe3b5601dc480d98d6a7c12905fb80f9cb",
         build_file_content = """
 # Description:
 #    Simple Python style checker in one Python file
@@ -33,13 +34,13 @@ py_binary(
 """,
     )
 
-    # https://github.com/cpplint/cpplint
+    # https://github.com/cpplint/cpplint/commits
     github_repo(
         name = "cpplint_archive",
         user = "cpplint",
         repo = "cpplint",
-        tag = "fa30cca65ff7da6fcb8773725bda7c8455d292a6",
-        sha256 = "97fc4276d658e7ffad72432b1ad17eeaaa31ba95a08b47a055d9b2f93994ac53",
+        tag = "6b1d29874dc5d7c3c9201b70e760b3eb9468a60d",
+        sha256 = "153a77054c488df63a6c49fb5eed9a60b7d82afc42216dc6090cf314168e253a",
         build_file_content = """
 # Description:
 #    Static code checker for C++
@@ -57,37 +58,37 @@ py_binary(
 
 def google_cpp_dependencies(**kwargs):
     # Bazel rules_cc
-    # https://github.com/bazelbuild/rules_cc
+    # https://github.com/bazelbuild/rules_cc/commits
     github_repo(
         name = "rules_cc",
         user = "bazelbuild",
         repo = "rules_cc",
-        tag = "40548a2974f1aea06215272d9c2b47a14a24e556",
-        sha256 = "cb8ce8a25464b2a8536450971ad1b45ee309491c1f5e052a611b9e249cfdd35d",
+        tag = "0913abc3be0edff60af681c0473518f51fb9eeef",
+        sha256 = "04d22a8c6f0caab1466ff9ae8577dbd12a0c7d0bc468425b75de094ec68ab4f9",
     )
 
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
-    # https://github.com/google/googletest
+    # https://github.com/google/googletest/commits
     github_repo(
         name = "com_github_google_googletest",
         user = "google",
         repo = "googletest",
-        tag = "f3ef7e173fd0853069f16c4b5afc7e80a350604b",
-        sha256 = "c9c916fa8e4ccc3ac53a5882563a8626e5878c3220bb14b13caf153f2f7d1d05",
+        tag = "2f80c2ba71c0e8922a03b9b855e5b019ad1f7064",
+        sha256 = "3e7bfa4a38df9e5b7b653a2e44d25306a3b31bd0ad0ec3286e22b4af60550d3a",
     )
 
     # Google benchmark.
-    # https://github.com/google/benchmark
+    # https://github.com/google/benchmark/commits
     github_repo(
         name = "com_github_google_benchmark",
         user = "google",
         repo = "benchmark",
-        tag = "8df87f6c879cbcabd17c5cfcec7b89687df36953",
-        sha256 = "800112ff3ca87344e034d8f8f2d081c945d218c02a2ab6dc1025a091e29f279e",
+        tag = "8fd49d66719b37156d8e4f7bc2817665ce43664a",
+        sha256 = "08ca840df9976ff90774bc6370ad486da4b797612e091feba600277e4a72595b",
     )
 
     # GFlags
-    # https://github.com/gflags/gflags
+    # https://github.com/gflags/gflags/commits
     github_repo(
         name = "com_github_gflags_gflags",
         user = "gflags",
@@ -97,21 +98,21 @@ def google_cpp_dependencies(**kwargs):
     )
 
     # Glog
-    # https://github.com/google/glog
+    # https://github.com/google/glog/commits
     github_repo(
         name = "com_github_google_glog",
         user = "google",
         repo = "glog",
-        tag = "c8f8135a5720aee7de8328b42e4c43f8aa2e60aa",
-        sha256 = "e71eee9b71c69e9c378efd474d9d8a389492cca43b02977813b961f8fc16d30e",
+        tag = "6f9e32a79ed6b3df7eb43e88819c5d4e69036e4d",
+        sha256 = "30c9b1e59a8488c0eabf3481c145150e5c7742a2286a4c9173bbbf004445178d",
     )
 
     # Abseil
-    # https://github.com/abseil/abseil-cpp
+    # https://github.com/abseil/abseil-cpp/commits
     github_repo(
         name = "com_google_absl",
         user = "abseil",
         repo = "abseil-cpp",
-        tag = "9c6a50fdd80bb39fabd95faeda84f04062685ff3",
-        sha256 = "8b55c4262cd7acf30a087aab7f643a59598e0f66f891cba682d7d981e548a9bc",
+        tag = "f39e6ad4753e06d4a0d6a9bf6310478757479984",
+        sha256 = "f718dd6f480f963a13df35ecd5ce00364aa52ac949ad0895f9245dc0c0348c5a",
     )

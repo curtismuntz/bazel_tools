@@ -22,6 +22,7 @@ cc_test(
     deps = [
         ":cpp_lib",
         "@com_github_google_googletest//:gtest",
+        "@com_github_google_googletest//:gtest_main",
     ],
 )
 
