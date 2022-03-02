@@ -67,9 +67,9 @@ def google_cpp_dependencies(**kwargs):
 
     http_archive(
         name = "rules_cc",
-        sha256 = "04d22a8c6f0caab1466ff9ae8577dbd12a0c7d0bc468425b75de094ec68ab4f9",
-        strip_prefix = "rules_cc-0913abc3be0edff60af681c0473518f51fb9eeef",
-        urls = ["https://github.com/bazelbuild/rules_cc/archive/0913abc3be0edff60af681c0473518f51fb9eeef.tar.gz"],
+        sha256 = "ff7876d80cd3f6b8c7a064bd9aa42a78e02096544cca2b22a9cf390a4397a53e",
+        strip_prefix = "rules_cc-081771d4a0e9d7d3aa0eed2ef389fa4700dfb23e",
+        urls = ["https://github.com/bazelbuild/rules_cc/archive/081771d4a0e9d7d3aa0eed2ef389fa4700dfb23e.tar.gz"],
     )
 
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
