@@ -59,7 +59,15 @@ py_binary(
 def google_cpp_dependencies(**kwargs):
     # Bazel rules_cc
     # https://github.com/bazelbuild/rules_cc/commits
-    #    if "rules_cc" not in native.existing_rules():
+    # Bazel platform rules.
+    maybe(
+        http_archive,
+        name = "platforms",
+        sha256 = "b601beaf841244de5c5a50d2b2eddd34839788000fa1be4260ce6603ca0d8eb7",
+        strip_prefix = "platforms-98939346da932eef0b54cf808622f5bb0928f00b",
+        urls = ["https://github.com/bazelbuild/platforms/archive/98939346da932eef0b54cf808622f5bb0928f00b.zip"],
+    )
+
     maybe(
         http_archive,
         name = "rules_cc",
@@ -113,7 +121,7 @@ def google_cpp_dependencies(**kwargs):
     maybe(
         http_archive,
         name = "com_google_absl",
-        urls = ["https://github.com/google/glog/archive/f39e6ad4753e06d4a0d6a9bf6310478757479984.tar.gz"],
-        strip_prefix = "abseil-cpp-f39e6ad4753e06d4a0d6a9bf6310478757479984",
-        sha256 = "f718dd6f480f963a13df35ecd5ce00364aa52ac949ad0895f9245dc0c0348c5a",
+        urls = ["https://github.com/abseil/abseil-cpp/archive/refs/tags/20211102.0.tar.gz"],
+        strip_prefix = "abseil-cpp-20211102.0",
+        sha256 = "dcf71b9cba8dc0ca9940c4b316a0c796be8fab42b070bb6b7cab62b48f0e66c4",
     )
