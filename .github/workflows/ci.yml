@@ -14,7 +14,7 @@ jobs:
   ci:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: bazelbuild/setup-bazelisk@v1
       - name: Mount bazel cache  # Optional
         uses: actions/cache@v2
