@@ -103,9 +103,9 @@ def google_cpp_dependencies(**kwargs):
     maybe(
         http_archive,
         name = "com_github_google_glog",
-        urls = ["https://github.com/google/glog/archive/6f9e32a79ed6b3df7eb43e88819c5d4e69036e4d.tar.gz"],
-        strip_prefix = "glog-6f9e32a79ed6b3df7eb43e88819c5d4e69036e4d",
-        sha256 = "30c9b1e59a8488c0eabf3481c145150e5c7742a2286a4c9173bbbf004445178d",
+        urls = ["https://github.com/google/glog/archive/refs/tags/v0.6.0-rc1.tar.gz"],
+        strip_prefix = "glog-0.6.0-rc1",
+        sha256 = "3529e415a355a13fe63f6730fafbf50572174c094cb3ba0b38c99e4bec09d266",
     )
 
     # Abseil
