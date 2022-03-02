@@ -87,9 +87,9 @@ def google_cpp_dependencies(**kwargs):
     # https://github.com/gflags/gflags/commits
     http_archive(
         name = "com_github_gflags_gflags",
-        strip_prefix = "gflags-827c769e5fc98e0f2a34c47cef953cc6328abced",
-        urls = ["https://github.com/gflags/gflags/archive/827c769e5fc98e0f2a34c47cef953cc6328abced.tar.gz"],
-        sha256 = "ce2931dd537eaab7dab78b25bec6136a0756ca0b2acbdab9aec0266998c0d9a7",
+        strip_prefix = "gflags-986e8eed00ded8168ef4eaa6f925dc6be50b40fa",
+        urls = ["https://github.com/gflags/gflags/archive/986e8eed00ded8168ef4eaa6f925dc6be50b40fa.tar.gz"],
+        sha256 = "94eee3622e33eb7641614964b4ea8b7a77ed8b6e6795ee2f73124f67fe99245e",
     )
 
     # Glog
