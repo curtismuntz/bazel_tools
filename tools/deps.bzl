@@ -76,9 +76,9 @@ def google_cpp_dependencies(**kwargs):
     # https://github.com/google/googletest/commits
     http_archive(
         name = "com_github_google_googletest",
-        sha256 = "3e7bfa4a38df9e5b7b653a2e44d25306a3b31bd0ad0ec3286e22b4af60550d3a",
-        strip_prefix = "googletest-2f80c2ba71c0e8922a03b9b855e5b019ad1f7064",
-        urls = ["https://github.com/google/googletest/archive/2f80c2ba71c0e8922a03b9b855e5b019ad1f7064.tar.gz"],
+        sha256 = "07680779551cdb1fde712c5c4a28f4a637aafa05b8683648c86480570cca43f6",
+        strip_prefix = "googletest-c9461a9b55ba954df0489bab6420eb297bed846b",
+        urls = ["https://github.com/google/googletest/archive/c9461a9b55ba954df0489bab6420eb297bed846b.tar.gz"],
     )
 
     # Google benchmark.
