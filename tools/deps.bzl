@@ -111,9 +111,9 @@ def google_cpp_dependencies(**kwargs):
     if "com_github_google_glog" not in native.existing_rules():
         http_archive(
             name = "com_github_google_glog",
-            urls = ["https://github.com/google/glog/archive/refs/tags/v0.6.0-rc1.tar.gz"],
-            strip_prefix = "glog-0.6.0-rc1",
-            sha256 = "3529e415a355a13fe63f6730fafbf50572174c094cb3ba0b38c99e4bec09d266",
+            urls = ["https://github.com/google/glog/archive/refs/tags/v0.6.0.tar.gz"],
+            strip_prefix = "glog-0.6.0",
+            sha256 = "8a83bf982f37bb70825df71a9709fa90ea9f4447fb3c099e1d720a439d88bad6",
         )
 
     # Abseil
