@@ -121,7 +121,7 @@ def google_cpp_dependencies(**kwargs):
     if "com_google_absl" not in native.existing_rules():
         http_archive(
             name = "com_google_absl",
-            urls = ["https://github.com/abseil/abseil-cpp/archive/refs/tags/20211102.0.tar.gz"],
-            strip_prefix = "abseil-cpp-20211102.0",
-            sha256 = "dcf71b9cba8dc0ca9940c4b316a0c796be8fab42b070bb6b7cab62b48f0e66c4",
+            urls = ["https://github.com/abseil/abseil-cpp/archive/refs/tags/20230802.1.tar.gz"],
+            strip_prefix = "abseil-cpp-20230802.1",
+            sha256 = "987ce98f02eefbaf930d6e38ab16aa05737234d7afbab2d5c4ea7adbe50c28ed",
         )
