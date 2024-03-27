@@ -16,9 +16,9 @@ def linter_dependencies(**kwargs):
     if "pycodestyle_archive" not in native.existing_rules():
         http_archive(
             name = "pycodestyle_archive",
-            urls = ["https://github.com/PyCQA/pycodestyle/archive/aa3417b6a51f5912e32d9c8c879e1b9dd660d5f8.tar.gz"],
-            strip_prefix = "pycodestyle-aa3417b6a51f5912e32d9c8c879e1b9dd660d5f8",
-            sha256 = "21653cea212b8c3e3ab5934afb3138fe3b5601dc480d98d6a7c12905fb80f9cb",
+            urls = ["https://github.com/PyCQA/pycodestyle/archive/2b9080353f8a4208a1d8b7b364d96e704484e80e.tar.gz"],
+            strip_prefix = "pycodestyle-2b9080353f8a4208a1d8b7b364d96e704484e80e",
+            sha256 = "2a7b00aa0684e0538fb3663198a8cf6869476ddacc4174b1238e6f4953cd781f",
             build_file_content = """
 # Description:
 #    Simple Python style checker in one Python file
