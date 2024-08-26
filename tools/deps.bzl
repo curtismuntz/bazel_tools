@@ -63,9 +63,9 @@ def google_cpp_dependencies(**kwargs):
     if "platforms" not in native.existing_rules():
         http_archive(
             name = "platforms",
-            sha256 = "54095d9e2a2c6c0d4629c99fc80ecf4f74f93771aea658c872db888c1103bb93",
-            strip_prefix = "platforms-fbd0d188dac49fbcab3d2876a2113507e6fc68e9",
-            urls = ["https://github.com/bazelbuild/platforms/archive/fbd0d188dac49fbcab3d2876a2113507e6fc68e9.zip"],
+            sha256 = "b0e51473bb3ba92c8c26d467bd0cb0ce0254ebf38b06787d43a089c812f2ce43",
+            strip_prefix = "platforms-d5fcb55bf8201539d0c3cb3a882c475330983156",
+            urls = ["https://github.com/bazelbuild/platforms/archive/d5fcb55bf8201539d0c3cb3a882c475330983156.zip"],
         )
 
     if "rules_cc" not in native.existing_rules():
