@@ -38,9 +38,9 @@ py_binary(
     if "cpplint_archive" not in native.existing_rules():
         http_archive(
             name = "cpplint_archive",
-            urls = ["https://github.com/cpplint/cpplint/archive/6b1d29874dc5d7c3c9201b70e760b3eb9468a60d.tar.gz"],
-            strip_prefix = "cpplint-6b1d29874dc5d7c3c9201b70e760b3eb9468a60d",
-            sha256 = "153a77054c488df63a6c49fb5eed9a60b7d82afc42216dc6090cf314168e253a",
+            urls = ["https://github.com/cpplint/cpplint/archive/f4363d7fc0d5f38c4fd41b658e069e96583da0d5.tar.gz"],
+            strip_prefix = "cpplint-f4363d7fc0d5f38c4fd41b658e069e96583da0d5",
+            sha256 = "c1502a16e609c65731cd6eb62b94eb2e4ef5be195e57d85a5619f4ff12a0de3e",
             build_file_content = """
 # Description:
 #    Static code checker for C++
