@@ -101,9 +101,9 @@ def google_cpp_dependencies(**kwargs):
     if "com_github_gflags_gflags" not in native.existing_rules():
         http_archive(
             name = "com_github_gflags_gflags",
-            strip_prefix = "gflags-986e8eed00ded8168ef4eaa6f925dc6be50b40fa",
-            urls = ["https://github.com/gflags/gflags/archive/986e8eed00ded8168ef4eaa6f925dc6be50b40fa.tar.gz"],
-            sha256 = "94eee3622e33eb7641614964b4ea8b7a77ed8b6e6795ee2f73124f67fe99245e",
+            strip_prefix = "gflags-3c4399ba468e71947ca8945daa4dc274007c5e9b",
+            urls = ["https://github.com/gflags/gflags/archive/3c4399ba468e71947ca8945daa4dc274007c5e9b.tar.gz"],
+            sha256 = "b6c4fef86bd88399199ac4967cfdeae00eeb956f97d234684ef08def9d891b4f",
         )
 
     # Glog
