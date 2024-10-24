@@ -71,9 +71,9 @@ def google_cpp_dependencies(**kwargs):
     if "rules_cc" not in native.existing_rules():
         http_archive(
             name = "rules_cc",
-            sha256 = "19d93d9a54487343dec4fabccf9974a9a5e8749297a448d1f310459eeca5091e",
-            strip_prefix = "rules_cc-8bb0eb5c5ccd96b91753bb112096bb6993d16d13",
-            urls = ["https://github.com/bazelbuild/rules_cc/archive/8bb0eb5c5ccd96b91753bb112096bb6993d16d13.tar.gz"],
+            sha256 = "ca772d4fa149180dd1d81fe19a61c911dcebf9768d56209fc5bf382125ade0b6",
+            strip_prefix = "rules_cc-faeafdb82814b4f7295c555781e800f080607bdd",
+            urls = ["https://github.com/bazelbuild/rules_cc/archive/faeafdb82814b4f7295c555781e800f080607bdd.tar.gz"],
         )
 
     # GoogleTest/GoogleMock framework. Used by most unit-tests.
