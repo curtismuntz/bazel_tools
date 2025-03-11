@@ -81,9 +81,9 @@ def google_cpp_dependencies(**kwargs):
     if "com_github_google_googletest" not in native.existing_rules():
         http_archive(
             name = "com_github_google_googletest",
-            sha256 = "0c3c55603113067b651a2efb56367821482265ea796265a1a9c9c2402b3cbd50",
-            strip_prefix = "googletest-8d51dc50eb7e7698427fed81b85edad0e032112e",
-            urls = ["https://github.com/google/googletest/archive/8d51dc50eb7e7698427fed81b85edad0e032112e.tar.gz"],
+            sha256 = "763bc6388d36067e0559af9c7f1c1282ac323c48a223a93bbf84e8efe64c7c41",
+            strip_prefix = "googletest-4902ea2d7c6faed89b6facee00baa34bb108fc0d",
+            urls = ["https://github.com/google/googletest/archive/4902ea2d7c6faed89b6facee00baa34bb108fc0d.tar.gz"],
         )
 
     # Google benchmark.
