@@ -91,9 +91,9 @@ def google_cpp_dependencies(**kwargs):
     if "com_github_google_benchmark" not in native.existing_rules():
         http_archive(
             name = "com_github_google_benchmark",
-            urls = ["https://github.com/google/benchmark/archive/37be1e8252527229cccad9f097afe68572f3c08a.tar.gz"],
-            strip_prefix = "benchmark-37be1e8252527229cccad9f097afe68572f3c08a",
-            sha256 = "aedbd3655ac19aeccb4d542cc1f078a10797e4db9600717393eeb9cb1afa5d46",
+            urls = ["https://github.com/google/benchmark/archive/45ded53f70e129411b1a00de3876b604f049984e.tar.gz"],
+            strip_prefix = "benchmark-45ded53f70e129411b1a00de3876b604f049984e",
+            sha256 = "cbcb478c1fd35d6b1b2dc3ee24cd32fba316633b343fed4c0068a29cad812561",
         )
 
     # GFlags
